@@ -1,0 +1,6 @@
+{
+    "yaml.schemas": {
+        "Kubernetes": "*.yaml",
+        "kubernetes://schema/apps/v1%40deployment": "file:///Users/rkjha/codebase/node-microservice-ticketing-app/infra/k8s/auth-depl.yaml"
+    }
+}
