@@ -10,12 +10,19 @@ spec:
     - host: ticketapp.com
       http:
         paths:
-          - path: /api/user/?(.*)
+          - path: /api/users/?(.*)
             pathType: Prefix
             backend:
               service:
                 name: auth-clusterip-srv
                 port:
+                  number: 3000
+          - path: /api/tickets/?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: tickets-srv
+                port: 
                   number: 3000
           - path: /?(.*)/
             pathType: Prefix
@@ -24,3 +31,4 @@ spec:
                 name: client-srv
                 port:
                   number: 3000
+          
